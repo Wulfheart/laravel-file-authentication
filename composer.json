@@ -1,0 +1,54 @@
+{
+    "name": "wulfheart/laravel-file-authentication",
+    "description": "",
+    "keywords": [
+        "wulfheart",
+        "laravel-file-authentication"
+    ],
+    "homepage": "https://github.com/wulfheart/laravel-file-authentication",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alex Wulf",
+            "email": "dev@alexfwulf.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wulfheart\\LaravelFileAuthentication\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wulfheart\\LaravelFileAuthentication\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wulfheart\\LaravelFileAuthentication\\LaravelFileAuthenticationServiceProvider"
+            ],
+            "aliases": {
+                "LaravelFileAuthentication": "Wulfheart\\LaravelFileAuthentication\\LaravelFileAuthenticationFacade"
+            }
+        }
+    }
+}
